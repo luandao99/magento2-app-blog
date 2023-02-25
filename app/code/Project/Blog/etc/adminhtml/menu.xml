@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Project_Blog::blog" title="Blog Manage" module="Project_Blog" sortOrder="10" action="blog/news" resource="Project_Blog::blog"/>
+    </menu>
+</config>

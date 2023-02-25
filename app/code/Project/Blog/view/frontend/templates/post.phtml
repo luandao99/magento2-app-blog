@@ -1,0 +1,21 @@
+<?php
+
+use Codeception\Lib\Di;
+use Magento\Framework\View\Element\Template;
+use Project\Blog\ViewModel\Posts;
+
+$postsViewModel = $block->getData('posts_view_model');
+$collection = $postsViewModel->getPosts(10);
+// var_dump($collection);
+// die();
+?>
+<?php foreach ($collection as $post) : ?>
+
+    <div class="container">
+        <h1>Title:<?= $post->getData('title') ?></h1>
+        <h4>Auhtor:<?= $post->getData('author') ?></h4>
+        <h2>Description:<?= $post->getData('description') ?></h2>
+        <p>Content<?= $post->getData('content') ?></p>
+    </div>
+
+<?php endforeach; ?>
