@@ -26,8 +26,10 @@ class Save extends \Magento\Backend\App\Action
     {
 
         $data = $this->getRequest()->getPostValue();
-        var_dump($data);
-        die();
+        $getUrlImage = $this->getRequest()->getParam('head_shortcut_icon');
+        $urlImage = $getUrlImage[0]['url'];
+        $data['image']=$urlImage;
+        unset($data['head_shortcut_icon']);
         /** @var \Magento\Backend\Model\View\Result\Redirect $resultRedirect */
         $resultRedirect = $this->resultRedirectFactory->create();
         $id = $this->getRequest()->getParam('post_id');

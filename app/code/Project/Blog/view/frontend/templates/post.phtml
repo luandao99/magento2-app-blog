@@ -1,6 +1,5 @@
 <?php
 
-use Codeception\Lib\Di;
 use Magento\Framework\View\Element\Template;
 use Project\Blog\ViewModel\Posts;
 
@@ -10,12 +9,13 @@ $collection = $postsViewModel->getPosts(10);
 // die();
 ?>
 <?php foreach ($collection as $post) : ?>
-
     <div class="container">
-        <h1>Title:<?= $post->getData('title') ?></h1>
-        <h4>Auhtor:<?= $post->getData('author') ?></h4>
-        <h2>Description:<?= $post->getData('description') ?></h2>
-        <p>Content<?= $post->getData('content') ?></p>
+        <div class="card">
+            <h2><?= $post->getData('title') ?></h2>
+            <img class="" src="<?= $post->getData('image') ?>" alt="<?= $post->getData('image') ?>">
+            <p><?= $post->getData('description') ?></p>
+            <a href="#">Read More</a>
+        </div>
     </div>
 
 <?php endforeach; ?>

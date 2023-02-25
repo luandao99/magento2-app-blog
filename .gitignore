@@ -68,6 +68,3 @@ atlassian*
 /generated/*
 !/generated/.htaccess
 .DS_Store
-/setup
-/phpserver
-/pub

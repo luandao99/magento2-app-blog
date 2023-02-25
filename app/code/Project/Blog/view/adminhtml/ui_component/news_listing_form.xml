@@ -74,7 +74,7 @@
                 </item>
             </argument>
         </field>
-        <field name="content">
+        <!-- <field name="content">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
@@ -82,6 +82,38 @@
                     <item name="formElement" xsi:type="string">input</item>
                     <item name="source" xsi:type="string">news_listing_form</item>
                     <item name="dataScope" xsi:type="string">content</item>
+                </item>
+            </argument>
+        </field> -->
+         <field name="head_shortcut_icon" formElement="imageUploader">
+                <settings>
+                    <notice translate="true">Not all browsers support all these formats!</notice>
+                    <label translate="true">Favicon Icon</label>
+                    <componentType>imageUploader</componentType>
+                </settings>
+                <formElements>
+                    <imageUploader>
+                        <settings>
+                            <allowedExtensions>jpg jpeg gif png ico apng</allowedExtensions>
+                            <maxFileSize>2097152</maxFileSize>
+                            <uploaderConfig>
+                                <param xsi:type="string" name="url">blog/news/upload</param>
+                            </uploaderConfig>
+                        </settings>
+                    </imageUploader>
+                </formElements>
+            </field>
+          <field name="content">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">WYSIWYG Content</item>
+                    <item name="formElement" xsi:type="string">wysiwyg</item>
+                    <item name="wysiwyg" xsi:type="array">
+                        <item name="height" xsi:type="string">5em</item>
+                        <item name="width" xsi:type="string">50%</item>
+                    </item>
+                    <item name="source" xsi:type="string">news_listing_data_source</item>
+                    <item name="sortOrder" xsi:type="number">20</item>
                 </item>
             </argument>
         </field>
@@ -96,23 +128,7 @@
                 </item>
             </argument>
         </field>
-          <field name="image" formElement="imageUploader">
-                <settings>
-                    <label translate="true">Image</label>
-                    <componentType>imageUploader</componentType>
-                </settings>
-                <formElements>
-                    <imageUploader>
-                        <settings>
-                            <allowedExtensions>jpg jpeg gif png</allowedExtensions>
-                            <maxFileSize>2097152</maxFileSize>
-                            <uploaderConfig>
-                                <param xsi:type="string" name="url">blog/news/upload</param>
-                            </uploaderConfig>
-                        </settings>
-                    </imageUploader>
-                </formElements>
-            </field>
+        
         <field name="author">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
