@@ -1,0 +1,12 @@
+<?php
+$post = $block->getPost();
+// var_dump($collection);
+// die();
+?>
+<div class="container">
+    <div class="card">
+        <h2><?= $post->getData('title') ?></h2>
+        <img class="" src="<?= $post->getData('image') ?>" alt="<?= $post->getData('image') ?>">
+        <p><?= $post->getData('description') ?></p>
+        <p><?= $post->getData('post_id') ?></p>
+    </div>

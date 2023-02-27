@@ -21,8 +21,17 @@ class PostProvider
         $collection->addFieldToFilter('is_active','1');
         return $collection;
     }
+    public function getPost(){
+        
+    }
+    public function getById($id){
+        $collection = $this->getCollection();
+        $collection->addFieldToFilter('id',$id);
+        return $collection;
+    }
     private function getCollection()
     {
         return $this->collectionFactory->create();
     }
+
 }

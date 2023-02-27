@@ -16,6 +16,8 @@ class Posts implements ArgumentInterface
    {
     return  $this->postProvider->getPostsLimit($limit);
    }
- 
+   public function getPostById($id){
+      return $this->postProvider->getById($id);
+   }
 
 }
